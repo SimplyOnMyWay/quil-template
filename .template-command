@@ -1,0 +1,6 @@
+
+;;; local
+clojure -Sdeps '{:deps {simplyonmyway/quil-template {:local/root "quil-template/"}}}' -Tnew create :template simplyonmyway/quil-template :name simplyonmyway/testquil
+
+;;; remote - change sha for latest commit
+clojure -Sdeps '{:deps {com.github.SimplyOnMyWay/quil-template {:git/sha "afb71cef2583a5aa225bed709218688158f409ce"}}}' -Tnew create :template simplyonmyway/quil-template :name simplyonmyway/testquil
