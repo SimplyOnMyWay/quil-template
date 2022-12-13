@@ -1,0 +1,2 @@
+^{:log-syntax-error-style :concise}
+{:main {{top/ns}}.{main/ns}}

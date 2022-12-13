@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="https://clojurescript.org/images/cljs-logo-icon-32.png">
+    <script src="js/ab-hash.js"></script>
+  </head>
+  <body>
+    <div id="{{main/ns}}">
+      <script src="cljs-out/dev-main.js" type="text/javascript"></script>
+      <script>{{top/ns}}.{{main/file}}.run_sketch()</script>
+    </div> <!-- end of app div -->
+  </body>
+</html>

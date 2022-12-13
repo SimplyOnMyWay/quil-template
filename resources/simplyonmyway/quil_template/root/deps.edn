@@ -1,0 +1,9 @@
+{:deps {org.clojure/clojure {:mvn/version "1.11.1"}
+        org.clojure/clojurescript {:mvn/version "1.11.60"}
+        com.bhauman/rebel-readline-cljs {:mvn/version "0.1.4"}
+        com.bhauman/figwheel-main {:mvn/version "0.2.18"}
+        quil/quil {:mvn/version "3.1.0"}}
+ :paths ["src" "resources" "target" "test"]
+ :aliases {:build {:main-opts ["-m" "figwheel.main" "-b" "dev" "-r"]}
+           :min   {:main-opts ["-m" "figwheel.main" "-O" "advanced" "-bo" "dev"]}
+           :test  {:main-opts ["-m" "figwheel.main" "-co" "test.cljs.edn" "-m" "simplyonmyway.test-runner"]}}}

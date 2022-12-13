@@ -1,0 +1,6 @@
+^{:watch-dirs ["src"]
+  :css-dirs ["resources/public/css"]
+  ;:auto-testing true
+  :ring-server-options {:port 9011}
+   }
+{:main {{top/ns}}.{{main/ns}}}
