@@ -9,7 +9,12 @@ FIXME: write usage documentation!
 This is a template project for use with [deps-new](https://github.com/seancorfield/deps-new).
 As originally generated, it will produce a new library project when run:
 
-    $ clojure -Sdeps '{:deps {net.clojars.simplyonmyway/quil-template {:local/root "."}}}' -Tnew create :template simplyonmyway/quil-template :name myusername/mycoollib
+;;; local
+clojure -Sdeps '{:deps {simplyonmyway/quil-template {:local/root "quil-template/"}}}' -Tnew create :template simplyonmyway/quil-template :name simplyonmyway/testquil
+
+;;; remote - change sha for latest commit
+clojure -Sdeps '{:deps {com.github.SimplyOnMyWay/quil-template {:git/sha "afb71cef2583a5aa225bed709218688158f409ce"}}}' -Tnew create :template simplyonmyway/quil-template :name simplyonmyway/testquil
+
 
 Assuming you have installed `deps-new` as your `new` "tool" via:
 
@@ -17,7 +22,7 @@ Assuming you have installed `deps-new` as your `new` "tool" via:
 clojure -Ttools install io.github.seancorfield/deps-new '{:git/tag "v0.4.13"}' :as new
 ```
 
-> Note: once the template has been published (to a public git repo), the invocation will be the same, except the `:local/root` dependency will be replaced by a git or Maven-like coordinate.
+> Note: once the template has been published (to a public git repo), the invocation will be the same, except the `:local/root` dependency will be replaced by a git or Maven-like coordinate (per 2nd command above, updated with preferred, likely latest SHA for git commit).
 
 Run this template project's tests (by default, this just validates your template's `template.edn`
 file -- that it is valid EDN and it satisfies the `deps-new` Spec for template files):
@@ -34,3 +39,7 @@ _Feel free to remove or change the `LICENSE` file and remove or update this_
 _section of the `README.md` file!_
 
 Distributed under the Eclipse Public License version 1.0.
+
+
+clojure -Sdeps '{:deps {io.github.simplyonmyway/quil-template {:git/sha "0246730c65eea3b1489fb0b81c477ac71a129a12"}}}'-Tnew create :template quil/sketchbook-cljs :name username.sketchbook \
+  :target-dir sketchbook
