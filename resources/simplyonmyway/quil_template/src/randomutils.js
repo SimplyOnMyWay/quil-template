@@ -95,6 +95,14 @@ let y2 = 0;
 {{top/ns}}.randomutils.random.prototype.random_choice = function(list) {
   return list[this.random_int(0, list.length - 1)];
 }
+//manual polyfill for goog.isNumber because it seems Clojure goog doesn't include it 
+if (typeof goog === 'undefined') {
+  console.log("goog is defined");
+  var goog = {};
+}
+goog.isNumber = function(val) {
+  return typeof val === 'number' && !isNaN(val);
+};
 // gaussian random value
 /**
  * @param {number} mean
